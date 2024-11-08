@@ -2,7 +2,11 @@ html {
   height: 100%;
   width: 100%;
 }
-    
+
+table, th, td {
+  border: 1px solid;
+}
+
 body{
 background-color: #e0e4ff;
   color: #ffffff;
@@ -14,6 +18,7 @@ h1 {
   text-align: center;
 }
 
+p.dashed {border-style: dashed;}
 
 
 
