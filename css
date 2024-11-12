@@ -3,6 +3,30 @@ body {
    flex-direction: column;
    align-items: center;
    font-family: Arial, sans-serif;
+   background: linear-gradient(to bottom, #0000ff, #ffffff); /* Blue to white gradient */
+   min-height: 100vh;
+   margin: 0;
+}
+
+#logo {
+   width: 100px;
+   height: auto;
+   margin-top: 10px;
+}
+
+table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+   padding: 10px;
+   text-align: center;
+   background-color: #ffffff; /* Set table background to white for readability */
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: Arial, sans-serif;
 }
 
 #logo {
