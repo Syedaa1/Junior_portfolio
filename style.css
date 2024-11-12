@@ -19,6 +19,5 @@ table, th, td {
    border-collapse: collapse;
    padding: 10px;
    text-align: center;
-   background-color: #ffffff; /* Set table background to white for readability */
-}
+   background-color: #ffffff; 
 
