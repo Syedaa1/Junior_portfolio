@@ -8,3 +8,25 @@ body {
    margin: 0;
 }
 
+.active .arrow {
+  transform: rotate(225deg);
+}
+
+.sub-table-wrap {
+  display: none;
+  background: #fff;
+}
+
+.full-sub-table {
+  background: #f9fdf5;
+  padding: 24px 14px;
+}
+
+.info-wrapper {
+  display: inline-block;
+  margin: 0;
+  width: 24%;
+}
+
+.info-wrapper dt {
+  color: rgba(51,
