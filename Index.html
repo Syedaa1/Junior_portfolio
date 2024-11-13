@@ -1,33 +1,75 @@
  <!DOCTYPE html>
+<html lang="en">
 <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>My Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-   <h4>Thomas A. Edison CTE HS</h4>
-   <h4>Web and App Development</h4>
-   <h4>Programming and Prototyping</h4>
-   <h4>School Year 2024-25</h4>
-   <h4>Syeda Mahia</h4>
+   <div class="portfolio-header">
+      <h4>Thomas A. Edison CTE HS</h4>
+      <h4>Web and App Development</h4>
+      <h4>Programming and Prototyping</h4>
+      <h4>School Year 2024-25</h4>
+      <h4>Syeda Mahia</h4>
+   </div>
 
-   <h2>CFU's and Notebooks</h2>
+   <table>
+      <thead>
+         <tr>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Details</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr class="main-row" onclick="toggleRow(this)">
+            <td>Project 1</td>
+            <td>Responsive Website Design</td>
+            <td>September 2024</td>
+            <td>Completed</td>
+            <td><span class="arrow">&#9662;</span></td>
+         </tr>
+         <tr class="toggle-row">
+            <td colspan="5">
+               <div class="sub-table-wrap">
+                  <div class="full-sub-table">
+                     <dl class="info-wrapper">
+                        <dt>Budget</dt><dd>Rs. 2,00,000</dd>
+                     </dl>
+                     <dl class="info-wrapper">
+                        <dt>Volume</dt><dd>10 pages</dd>
+                     </dl>
+                     <dl class="info-wrapper">
+                        <dt>Unit</dt><dd>Website</dd>
+                     </dl>
+                     <dl class="info-wrapper">
+                        <dt>Expenditure Type</dt><dd>Capital Expenditure</dd>
+                     </dl>
+                  </div>
+               </div>
+            </td>
+         </tr>
+      </tbody>
+   </table>
 
-<span>0%</span>
-</td>
-<td><span class="arrow"></span></td>
-</tr>
-<tr class="toggle-row">
-  <td colspan="5">
-    <div class="sub-table-wrap">
-      <div class="full-sub-table">
-        <dl class="info-wrapper">
-          <dt>Budget</dt><dd>Rs. 2,00,00,000</dd>
-        </dl>
-        <dl class="info-wrapper">
-          <dt>Volume</dt><dd
+   <script>
+      function toggleRow(row) {
+         const nextRow = row.nextElementSibling;
+         nextRow.classList.toggle("active");
+         const arrow = row.querySelector(".arrow");
+         if (nextRow.classList.contains("active")) {
+            nextRow.querySelector(".sub-table-wrap").style.display = "block";
+         } else {
+            nextRow.querySelector(".sub-table-wrap").style.display = "none";
+         }
+      }
+   </script>
 
- 
+</body>
 </html>
-
