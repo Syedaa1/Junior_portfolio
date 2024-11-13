@@ -1,11 +1,11 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>My Portfolio</title>
    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
 </head>
 <body>
 
@@ -44,16 +44,19 @@
    <script>
       function toggleRow(row) {
          const nextRow = row.nextElementSibling;
-         nextRow.classList.toggle("active");
          const arrow = row.querySelector(".arrow");
+         nextRow.classList.toggle("active");
          if (nextRow.classList.contains("active")) {
             nextRow.querySelector(".sub-table-wrap").style.display = "block";
+            arrow.style.transform = "rotate(90deg)"; // Rotate the arrow
          } else {
             nextRow.querySelector(".sub-table-wrap").style.display = "none";
+            arrow.style.transform = "rotate(0deg)"; // Reset arrow
          }
       }
    </script>
 
 </body>
 </html>
+
 
