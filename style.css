@@ -36,7 +36,7 @@ td {
 
 .arrow {
    cursor: pointer;
-   transition: transform 0.3s ease; /* Added transition for smoother rotation */
+   transition: transform 0.3s ease; 
    display: inline-block;
    vertical-align: middle;
 }
@@ -46,11 +46,11 @@ td {
 }
 
 .toggle-row {
-   display: none; /* Hide by default */
+   display: none; 
 }
 
 .toggle-row.active {
-   display: table-row; /* Show when active */
+   display: table-row; 
 }
 
 .sub-table-wrap {
@@ -84,7 +84,6 @@ td {
    margin: 0;
 }
 
-/* Arrow Rotation when the row is active */
 .main-row.active .arrow {
-   transform: rotate(90deg); /* Arrow rotates when row is expanded */
+   transform: rotate(90deg); 
 }
