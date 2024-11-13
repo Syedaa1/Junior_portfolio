@@ -36,17 +36,33 @@ td {
 
 .arrow {
    cursor: pointer;
-   transition: transform 0.3s;
+   transition: transform 0.3s ease; /* Added transition for smoother rotation */
+   display: inline-block;
+   vertical-align: middle;
 }
 
-.active .arrow {
-   transform: rotate(225deg);
+.main-row {
+   cursor: pointer;
+}
+
+.toggle-row {
+   display: none; /* Hide by default */
+}
+
+.toggle-row.active {
+   display: table-row; /* Show when active */
 }
 
 .sub-table-wrap {
    display: none;
    background: #f9fdf5;
    padding: 10px;
+   margin-top: 10px;
+   border-radius: 5px;
+}
+
+.sub-table-wrap.active {
+   display: block;
 }
 
 .full-sub-table {
@@ -68,5 +84,7 @@ td {
    margin: 0;
 }
 
+/* Arrow Rotation when the row is active */
+.main-row.active .arrow {
+   transform: rotate(90deg); /* Arrow rotates when row is expanded */
 }
-
