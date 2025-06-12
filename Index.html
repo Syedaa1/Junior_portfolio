@@ -1,60 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>My Portfolio</title>
-   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-   <link rel="stylesheet" href="style.css"> 
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <style>
+        /* Background with sage green to white gradient */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #B2AC88, #ffffff);
+            color: #333;
+        }
+
+        /* Header with forest green border */
+        header {
+            background-color: #2E4F2E;
+            padding: 15px 0;
+            border-bottom: 4px solid #1E3B1E;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section styling */
+        section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+            border-left: 5px solid #1E3B1E;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #2E4F2E;
+            margin-top: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
-   <div class="portfolio-header">
-      <h4>Thomas A. Edison CTE HS</h4>
-      <h4>Programming and Prototyping</h4>
-      <h4>School Year 2024-25</h4>
-      <h4>Syeda Mahia</h4>
-   </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="cfus.html">CFUs</a></li>
+                <li><a href="#team">Team Built Games</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+            </ul>
+        </nav>
+    </header>
 
-   <table>
-      <thead>
-         <tr>
-            <th>Notebooks</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr class="main-row" onclick="toggleRow(this)">
-            <td>Unit 1 Notebook</td>
-            <td><span class="arrow">&#9662;</span></td>
-         </tr>
-         <tr class="toggle-row">
-            <td colspan="2">
-               <div class="sub-table-wrap">
-                  <div class="full-sub-table">
-                     <dl class="info-wrapper">
-                        <dt>Unit</dt><dd>Website</dd>
-                     </dl>
-                  </div>
-               </div>
-            </td>
-         </tr>
-      </tbody>
-   </table>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>This is a placeholder for your personal introduction. You can write about your background, interests, skills, and goals here.</p>
+    </section>
 
-   <script>
-      function toggleRow(row) {
-         const nextRow = row.nextElementSibling;
-         const arrow = row.querySelector(".arrow");
-         nextRow.classList.toggle("active");
-         if (nextRow.classList.contains("active")) {
-            nextRow.querySelector(".sub-table-wrap").style.display = "block";
-            arrow.style.transform = "rotate(90deg)"; // Rotate the arrow
-         } else {
-            nextRow.querySelector(".sub-table-wrap").style.display = "none";
-            arrow.style.transform = "rotate(0deg)"; // Reset arrow
-         }
-      }
-   </script>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Showcase a few individual projects. You can include brief descriptions, technologies used, and maybe links to GitHub or live demos.</p>
+    </section>
+
+    <section id="team">
+        <h2>Team Built Games</h2>
+        <p>Describe games or applications you built with a team. Include your role, the stack used, and what you learned from the experience.</p>
+    </section>
+
+    <section id="reflection">
+        <h2>Reflection</h2>
+        <p>Share your reflections on your journey, things you've improved on, challenges you overcame, or goals you're working towards.</p>
+    </section>
 
 </body>
 </html>
